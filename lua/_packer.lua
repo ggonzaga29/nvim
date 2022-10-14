@@ -5,7 +5,9 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+  
   use 'andweeb/presence.nvim'
+ 
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -14,20 +16,28 @@ return require('packer').startup(function(use)
     
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
-
+ 
   use "ellisonleao/gruvbox.nvim"
-
+ 
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-
+ 
   use "lukas-reineke/indent-blankline.nvim"
-
+ 
   use {
     'romgrk/barbar.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
+ 
+  use 'tpope/vim-commentary'
+ 
+  use 'jiangmiao/auto-pairs'
+
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end}
 
   if packer_bootstrap then
     require('packer').sync()

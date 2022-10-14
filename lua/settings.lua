@@ -2,7 +2,6 @@ local g = vim.g
 local o = vim.o
 
 -- turn off animated cursor
-
 if g.neovide then
     g.neovide_cursor_animation_length = 0
 end
@@ -13,7 +12,7 @@ g.mapleader = " "
 -- cmd('syntax on')
 -- vim.api.nvim_command('filetype plugin indent on')
 
-o.guifont = "Fira Code:h13"
+o.guifont = "JetBrains Mono:h11"
 
 o.termguicolors = true
 -- o.background = 'dark'
@@ -34,6 +33,8 @@ o.numberwidth = 5
 o.relativenumber = true
 -- o.signcolumn = 'yes:2'
 o.cursorline = true
+vim.cmd("set noshowmode")
+vim.cmd("set shell=powershell")
 
 -- Better editing experience
 o.expandtab = true
