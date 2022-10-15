@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
     requires = {
         'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
-    
+
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
  
@@ -38,6 +38,13 @@ return require('packer').startup(function(use)
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
   end}
+
+  use {
+      "nvim-treesitter/nvim-treesitter",
+      run = ":TSUpdate"
+  }
+
+  use 'neovim/nvim-lspconfig'
 
   if packer_bootstrap then
     require('packer').sync()

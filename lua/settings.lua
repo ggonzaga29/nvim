@@ -34,7 +34,7 @@ o.relativenumber = true
 -- o.signcolumn = 'yes:2'
 o.cursorline = true
 vim.cmd("set noshowmode")
-vim.cmd("set shell=powershell")
+-- vim.cmd("set shell=powershell")
 
 -- Better editing experience
 o.expandtab = true

@@ -17,3 +17,10 @@ require('plugins.lualine')
 require('plugins.indent_blankline')
 -- barbar
 require('plugins.barbar')
+-- treesitter
+require('plugins.treesitter')
+
+-- require'lspconfig'.clangd.setup{
+--     on_attach = on_attach,
+--     flags = lsp_flags
+-- }
