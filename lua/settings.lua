@@ -34,7 +34,14 @@ o.relativenumber = true
 -- o.signcolumn = 'yes:2'
 o.cursorline = true
 vim.cmd("set noshowmode")
--- vim.cmd("set shell=powershell")
+
+-- configure powershell as default shell
+-- if vim.fn.has("win32") then
+--     vim.cmd("set shell=powershell")
+--     vim.cmd("set shellcmdflag=-command")
+--     vim.cmd("set shellquote=\"")
+--     vim.cmd("set shellxquote=")
+-- end
 
 -- Better editing experience
 o.expandtab = true

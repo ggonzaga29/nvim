@@ -3,6 +3,6 @@ local function map(m, k, v)
 end
 
 map('n', '<C-b>', ':NvimTreeToggle<CR>')
-map('n', 'cpp', ':!g++ % -o a.out && a.out')
+map('n', '<Leader>run', [[:echo expand("%:e")]])
 map('n', '<C-s>', ':w<CR>')
 
