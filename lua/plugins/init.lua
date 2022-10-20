@@ -20,4 +20,4 @@ require('plugins.treesitter')
 require('plugins.mason')
 -- cmp
 require('plugins.cmp')
-
+require('plugins.toggleterm')
