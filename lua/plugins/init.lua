@@ -1,8 +1,9 @@
 -- require plugin configs
 -- nvim tree
 require('plugins.nvim_tree')
--- gruvbox
-require('plugins.gruvbox')
+-- color theme
+-- require('plugins.gruvbox')
+require('plugins.catpuccin')
 -- presence
 require('plugins.presence')
 -- treesitter
@@ -19,3 +20,4 @@ require('plugins.treesitter')
 require('plugins.mason')
 -- cmp
 require('plugins.cmp')
+
