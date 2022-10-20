@@ -3,7 +3,7 @@
 require('plugins.nvim_tree')
 -- color theme
 -- require('plugins.gruvbox')
-require('plugins.catpuccin')
+-- require('plugins.catpuccin')
 -- presence
 require('plugins.presence')
 -- treesitter
