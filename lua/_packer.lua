@@ -55,11 +55,10 @@ return require("packer").startup(
             "romgrk/barbar.nvim",
             requires = {"kyazdani42/nvim-web-devicons"}
         }
-
+        
         use "tpope/vim-commentary"
 
-        use "jiangmiao/auto-pairs"
-
+--        use "jiangmiao/auto-pairs"
         use {
             "akinsho/toggleterm.nvim",
             tag = "*",
@@ -102,6 +101,24 @@ return require("packer").startup(
 
             config = [[ require('plugins/lsp-zero')]]
         }
+
+        use {
+            "windwp/nvim-autopairs",
+            config = function() require("nvim-autopairs").setup {} end
+        }
+
+        use 'mattn/emmet-vim'
+
+        use 'tpope/vim-surround'
+        
+       -- use {
+        --   'gorbit99/codewindow.nvim',
+        --   config = function()
+        --     local codewindow = require('codewindow')
+        --     codewindow.setup()
+        --     codewindow.apply_default_keybinds()
+        --   end,
+        -- }
 
         if packer_bootstrap then
             require("packer").sync()

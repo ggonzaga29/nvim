@@ -4,6 +4,8 @@ local o = vim.o
 -- turn off animated cursor
 if g.neovide then
     g.neovide_cursor_animation_length = 0
+    g.neovide_remember_window_size = false
+    g.hide_mouse_when_typing = true
 end
 
 -- set mapleader
@@ -12,7 +14,7 @@ g.mapleader = " "
 -- cmd('syntax on')
 -- vim.api.nvim_command('filetype plugin indent on')
 
-o.guifont = "JetBrains Mono:h11"
+o.guifont = "JetBrains Mono:h12"
 
 o.termguicolors = true
 -- o.background = 'dark'
