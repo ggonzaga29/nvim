@@ -21,3 +21,5 @@ require('plugins.mason')
 -- cmp
 require('plugins.cmp')
 require('plugins.toggleterm')
+require('plugins.null-ls')
+require('plugins.telescope')

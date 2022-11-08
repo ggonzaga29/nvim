@@ -1,7 +1,8 @@
 local langs = {
     cpp = ':TermExec cmd="g++ % -o a.out && a.out"<CR>',
     java = ':TermExec cmd="java %"',
-    default = 'Config not found for currrent file'
+    rust = ':TermExec cmd="cargo run"',
+    default = 'Config not found for currrent language'
 }
 
 local direction = 'horizontal'
@@ -14,7 +15,7 @@ vim.api.nvim_create_user_command(
 
         if not command then
             command = langs['default']
-            return print(command)
+            return print(command .. ': ' .. file_ext)
         end
 
         -- clear stdout 

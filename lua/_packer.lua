@@ -58,7 +58,7 @@ return require("packer").startup(
         
         use "tpope/vim-commentary"
 
---        use "jiangmiao/auto-pairs"
+--      use "jiangmiao/auto-pairs"
         use {
             "akinsho/toggleterm.nvim",
             tag = "*",
@@ -110,8 +110,20 @@ return require("packer").startup(
         use 'mattn/emmet-vim'
 
         use 'tpope/vim-surround'
-        
-       -- use {
+
+        use "jose-elias-alvarez/null-ls.nvim"
+
+        use {
+          'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        -- or                            , branch = '0.1.x',
+          requires = { {'nvim-lua/plenary.nvim'} }
+        }
+
+        use "tpope/vim-fugitive"
+
+        use "dense-analysis/ale"
+       
+        -- use {
         --   'gorbit99/codewindow.nvim',
         --   config = function()
         --     local codewindow = require('codewindow')
@@ -119,6 +131,8 @@ return require("packer").startup(
         --     codewindow.apply_default_keybinds()
         --   end,
         -- }
+        
+        use 'glepnir/dashboard-nvim'
 
         if packer_bootstrap then
             require("packer").sync()
